@@ -6,8 +6,10 @@
     <?php include 'model/dbconfig.php'; ?>
 
 
+
 <?php
-    $sql = "SELECT * FROM `articles` LIMIT 30";
+## per page query limit : SELECT id FROM articles LIMIT 10 OFFSET 0;
+    $sql = "SELECT * FROM `articles` ORDER BY `articles`.`date` DESC LIMIT 30 ";
     $result = mysqli_query($conn, $sql);
     echo '<div class="container"> <div class="row">';
     if (mysqli_num_rows($result) > 0) {
