@@ -3,8 +3,9 @@
 <?php include 'components/head.php'; ?>
   <body>
     <?php include 'nav.php'; ?>
-    <?php include 'model/dbconfig.php'; ?>
-
+    <?php include 'model/dbconfig.php'; 
+    $logged_in = '';
+    ?>
 
 
 <?php
@@ -14,7 +15,7 @@
     echo '<div class="container"> <div class="row">';
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) {
-            echo '<div class="col"> <div class="card" style="width: 18rem;"><a href="article.php/?id='.$row['id'].'" style="text-decoration:none;color:black;"><img src="..." class="card-img-top" alt="..."><div class="card-body">';
+            echo '<div class="col"> <div class="card" style="width: 18rem;"><a href="article.php/?id='.$row['id'].'" style="text-decoration:none;color:black;"><img src="uploads/articleimages/'.$row['bannername'].'" class="card-img-top" alt="..."><div class="card-body">';
             echo '<h5 class="card-title">'.$row["head"].'</h5>';
             echo "<p class='card-text'>". substr($row['body'], 0, 50)."..."."</p>";
             echo "<p class='card-text'>".$row['date']."</p></div></a></div> </div>";                

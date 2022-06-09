@@ -8,20 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="adminhome.php">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="admin.php">Dashboard</a>
         </li>
-
+    
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      <div class="d-flex">
-        
-        <a href="login.php" class="btn btn-outline-success"> Login</a>
-        
+      <div class="d-flex">        
+      <a href="createArticle.php" class="btn btn-outline-success"> Create Article</a>
+        <a href="login.php" class="btn btn-outline-danger"> Logout</a>
 
     </div>
     </div>
