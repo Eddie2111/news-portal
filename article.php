@@ -25,7 +25,7 @@
         }
 ?>
 
-<form method='post' action="controller/commentpost.php?id=<?php echo $id;?>">
+<form method='post' action="../controller/commentpost.php?id=<?php echo $id;?>">
     <label> Post your comment</label>
     <div name='id' value=<?php $id; ?> > </div>
     <input type="text" name="comment" class="form-control" placeholder="Comment">
